@@ -133,7 +133,7 @@
         object-fit: cover;
       }
 
-      .now-open-text {
+      .now-open-copy {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -141,14 +141,14 @@
         margin: 20px 20px;
       }
 
-      .now-open-text > h2 {
+      .now-open-copy > h2 {
         font-size: 22px;
         line-height: 24px;
         text-align: center;
         letter-spacing: 0.72px;
       }
 
-      .now-open-text > p {
+      .now-open-copy > p {
         font-size: 16px;
         line-height: 24px;
         text-align: center;
@@ -156,13 +156,78 @@
         margin: 16px 0;
       }
 
-      .now-open-text > a {
+      .now-open-copy > a {
         font-size: 14px;
         line-height: 20px;
         text-align: center;
         letter-spacing: 0.32px;
         text-decoration-line: underline;
         text-transform: uppercase;
+      }
+
+      .store-events {
+        border-top: 1px solid #dadada;
+        padding: 16px 0;
+        margin: 0 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .store-events > h2 {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.17px;
+        margin-bottom: 24px;
+      }
+
+      .store-events > img {
+        min-width: 340px;
+        height: 224px;
+        object-fit: cover;
+        margin-bottom: 24px;
+      }
+
+      .store-events-copy {
+        margin: 0 8px;
+      }
+
+      .store-events-copy > p {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.32px;
+        margin-bottom: 24px;
+      }
+
+      .newsletter-form {
+        position: relative;
+      }
+
+      .newsletter-form > input {
+        border: none;
+        border-bottom: 1px solid black;
+        padding: 16px 0;
+      }
+
+      .newsletter-form > input::placeholder {
+        font-family: Styrene A;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.16px;
+      }
+
+      .newsletter-submit {
+        background: none;
+        border: none;
+        position: absolute;
+        right: 0;
+        top: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 20px;
       }
 
       @media (min-width: 768px) {
@@ -242,7 +307,7 @@
         <section class="container">
           <div class="now-open">
             <img src="img/Palo_Alto.png" alt="Now open store" />
-            <div class="now-open-text">
+            <div class="now-open-copy">
               <h2>Miami Now Open</h2>
               <p>
                 We are excited to announce the openning of our new store in the
@@ -307,6 +372,45 @@
           </li>
         </ul>
       </section>
+    </section>
+    <!-- Store events section -->
+    <section class="store-events container">
+      <h2>Store events</h2>
+      <img src="img/events.png" alt="Store events" />
+      <div class="store-events-copy">
+        <p>
+          We also host fewer, better events with women we admire, partnering
+          brands and nonprofits that embody our same belief in intentional
+          living.
+        </p>
+        <p>
+          Please contact us at events@cuyana.com for any private or corporate
+          event inquiries.
+        </p>
+        <p>
+          To keep in touch and find out about future store events please sign uo
+          for our newsletter below:
+        </p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" />
+          <button type="submit" class="newsletter-submit">
+            <svg
+              width="15"
+              height="12"
+              viewBox="0 0 15 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M14.6808 6.2015C14.6808 6.0985 14.6388 6.0075 14.5728 5.9385C14.5718 5.9375 14.5728 5.9365 14.5718 5.9355L9.24476 0.6095C9.09876 0.4635 8.86076 0.4635 8.71376 0.6095C8.56876 0.7565 8.56876 0.9945 8.71376 1.1405L13.4008 5.8265H0.374756C0.167756 5.8265 -0.000244141 5.9945 -0.000244141 6.2015C-0.000244141 6.4085 0.167756 6.5765 0.374756 6.5765H13.4008L8.71376 11.2625C8.56876 11.4085 8.56876 11.6465 8.71376 11.7935C8.78676 11.8665 8.88376 11.9025 8.97976 11.9025C9.07576 11.9025 9.17176 11.8665 9.24476 11.7935L14.5718 6.4675C14.5728 6.4665 14.5718 6.4655 14.5728 6.4645C14.6388 6.3955 14.6808 6.3045 14.6808 6.2015Z"
+                fill="#565656"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
     </section>
   </body>
 </html>
