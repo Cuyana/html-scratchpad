@@ -45,6 +45,16 @@
 
       .details-header > a {
         text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .details-header > a > span {
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+        margin-left: 16px;
+        display: none;
       }
 
       .details-header > h2 {
@@ -123,6 +133,52 @@
         letter-spacing: 0.32px;
         margin-top: 24px;
       }
+
+      @media (min-width: 768px) {
+        .container {
+          max-width: 768px;
+        }
+
+        .details-header > a > span {
+          display: inline-block;
+        }
+
+        .carousel {
+          width: 719px;
+        }
+
+        .carousel-item > img {
+          width: 719px;
+          height: 456px;
+        }
+
+        .carousel-controls {
+          display: flex;
+          align-items: center;
+        }
+
+        #carousel-position {
+          padding: 0 5px;
+        }
+
+        #carousel-prev {
+          position: relative;
+          top: 0;
+          left: 0;
+        }
+
+        #carousel-next {
+          position: relative;
+          top: 0;
+          left: 0;
+        }
+
+        .details-contact {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 16px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -136,6 +192,7 @@
               d="M6.5 13a.497.497 0 01-.359-.152L0 6.5 6.141.152a.5.5 0 01.718.696L1.392 6.5l5.467 5.652A.5.5 0 016.5 13"
             />
           </svg>
+          <span>All stores</span>
         </a>
         <h2>San Francisco Showroom</h2>
       </section>
@@ -155,25 +212,41 @@
             </ul>
           </div>
         </div>
-        <button id="carousel-prev">
-          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18">
-            <path
-              fill="#1A1A1A"
-              fill-rule="evenodd"
-              d="M9.286 0a.72.72 0 00-.513.21L0 9l8.773 8.79a.731.731 0 001.01.015.678.678 0 00.016-.979L1.989 9l7.81-7.826a.678.678 0 00-.016-.979A.728.728 0 009.286 0"
-            />
-          </svg>
-        </button>
-        <div id="carousel-position"></div>
-        <button id="carousel-next">
-          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18">
-            <path
-              fill="#1A1A1A"
-              fill-rule="evenodd"
-              d="M.714 0a.72.72 0 01.513.21L10 9l-8.773 8.79a.731.731 0 01-1.01.015.678.678 0 01-.016-.979L8.011 9 .201 1.174A.678.678 0 01.217.195.728.728 0 01.714 0"
-            />
-          </svg>
-        </button>
+        <div class="carousel-controls">
+          <button id="carousel-prev">
+            <svg class="desktop-and-tablet" xmlns="http://www.w3.org/2000/svg" width="7" height="13">
+              <path 
+                fill="#979797"
+                fill-rule="evenodd" 
+                d="M6.5 0a.497.497 0 00-.359.152L0 6.5l6.141 6.348a.5.5 0 00.718-.696L1.392 6.5 6.859.848A.5.5 0 006.5 0"
+              />
+            </svg>
+            <svg class="phone-only" xmlns="http://www.w3.org/2000/svg" width="10" height="18">
+              <path 
+                fill="#1A1A1A" 
+                fill-rule="evenodd" 
+                d="M9.286 0a.72.72 0 00-.513.21L0 9l8.773 8.79a.731.731 0 001.01.015.678.678 0 00.016-.979L1.989 9l7.81-7.826a.678.678 0 00-.016-.979A.728.728 0 009.286 0"
+              />
+            </svg>
+          </button>
+          <div id="carousel-position"></div>
+          <button id="carousel-next">
+            <svg class="desktop-and-tablet" xmlns="http://www.w3.org/2000/svg" width="7" height="13">
+              <path 
+                fill="#979797" 
+                fill-rule="evenodd" 
+                d="M.5 0c.13 0 .262.051.359.152L7 6.5.859 12.848a.5.5 0 01-.718-.696L5.608 6.5.141.848A.5.5 0 01.5 0"
+              />
+            </svg>
+            <svg class="phone-only" xmlns="http://www.w3.org/2000/svg" width="10" height="18">
+              <path
+                fill="#1A1A1A"
+                fill-rule="evenodd"
+                d="M.714 0a.72.72 0 01.513.21L10 9l-8.773 8.79a.731.731 0 01-1.01.015.678.678 0 01-.016-.979L8.011 9 .201 1.174A.678.678 0 01.217.195.728.728 0 01.714 0"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
     <div class="container">
