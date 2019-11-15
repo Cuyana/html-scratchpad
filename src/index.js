@@ -1,6 +1,19 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import Glide from "@glidejs/glide";
 
-const Example = () => <div id="example"></div>;
+const glide = new Glide(".glide").mount();
 
-ReactDOM.render(<Example />, document.getElementById("root"));
+glide.on("move.after", function() {
+  const carouselPosition = document.querySelector("#carousel-position");
+  const items = document.querySelectorAll(".carousel-item").length;
+  carouselPosition.innerHTML = `${glide.index + 1}/${items}`;
+});
+
+const prevButton = document.querySelector("#carousel-prev");
+prevButton.addEventListener("click", () => {
+  glide.go("<");
+});
+
+const nextButton = document.querySelector("#carousel-next");
+nextButton.addEventListener("click", () => {
+  glide.go(">");
+});
