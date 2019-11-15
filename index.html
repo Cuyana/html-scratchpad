@@ -167,8 +167,8 @@
 
       .store-events {
         border-top: 1px solid #dadada;
-        padding: 16px 0;
-        margin: 0 8px;
+        padding: 16px 8px;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -182,7 +182,12 @@
         margin-bottom: 24px;
       }
 
-      .store-events > img {
+      .store-events-content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .store-events-content > img {
         min-width: 340px;
         height: 224px;
         object-fit: cover;
@@ -260,6 +265,20 @@
         .store-list > li {
           margin: 0 10px 80px 10px;
         }
+
+        .store-events-content > img {
+          min-width: 475px;
+          min-height: 313px;
+          margin-bottom: 32px;
+        }
+
+        .store-events-copy {
+          max-width: 475px;
+        }
+
+        .newsletter-form {
+          max-width: 228px;
+        }
       }
 
       @media (min-width: 960px) {
@@ -283,6 +302,12 @@
 
         .store > img {
           width: 284px;
+        }
+
+        .store-events-content {
+          width: 100%;
+          flex-direction: row-reverse;
+          justify-content: space-around;
         }
       }
 
@@ -374,43 +399,47 @@
       </section>
     </section>
     <!-- Store events section -->
-    <section class="store-events container">
-      <h2>Store events</h2>
-      <img src="img/events.png" alt="Store events" />
-      <div class="store-events-copy">
-        <p>
-          We also host fewer, better events with women we admire, partnering
-          brands and nonprofits that embody our same belief in intentional
-          living.
-        </p>
-        <p>
-          Please contact us at events@cuyana.com for any private or corporate
-          event inquiries.
-        </p>
-        <p>
-          To keep in touch and find out about future store events please sign uo
-          for our newsletter below:
-        </p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Your email address" />
-          <button type="submit" class="newsletter-submit">
-            <svg
-              width="15"
-              height="12"
-              viewBox="0 0 15 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M14.6808 6.2015C14.6808 6.0985 14.6388 6.0075 14.5728 5.9385C14.5718 5.9375 14.5728 5.9365 14.5718 5.9355L9.24476 0.6095C9.09876 0.4635 8.86076 0.4635 8.71376 0.6095C8.56876 0.7565 8.56876 0.9945 8.71376 1.1405L13.4008 5.8265H0.374756C0.167756 5.8265 -0.000244141 5.9945 -0.000244141 6.2015C-0.000244141 6.4085 0.167756 6.5765 0.374756 6.5765H13.4008L8.71376 11.2625C8.56876 11.4085 8.56876 11.6465 8.71376 11.7935C8.78676 11.8665 8.88376 11.9025 8.97976 11.9025C9.07576 11.9025 9.17176 11.8665 9.24476 11.7935L14.5718 6.4675C14.5728 6.4665 14.5718 6.4655 14.5728 6.4645C14.6388 6.3955 14.6808 6.3045 14.6808 6.2015Z"
-                fill="#565656"
-              />
-            </svg>
-          </button>
-        </form>
-      </div>
-    </section>
+    <div class="container">
+      <section class="store-events">
+        <h2>Store events</h2>
+        <div class="store-events-content">
+          <img src="img/events.png" alt="Store events" />
+          <div class="store-events-copy">
+            <p>
+              We also host fewer, better events with women we admire, partnering
+              brands and nonprofits that embody our same belief in intentional
+              living.
+            </p>
+            <p>
+              Please contact us at events@cuyana.com for any private or
+              corporate event inquiries.
+            </p>
+            <p>
+              To keep in touch and find out about future store events please
+              sign uo for our newsletter below:
+            </p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" />
+              <button type="submit" class="newsletter-submit">
+                <svg
+                  width="15"
+                  height="12"
+                  viewBox="0 0 15 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M14.6808 6.2015C14.6808 6.0985 14.6388 6.0075 14.5728 5.9385C14.5718 5.9375 14.5728 5.9365 14.5718 5.9355L9.24476 0.6095C9.09876 0.4635 8.86076 0.4635 8.71376 0.6095C8.56876 0.7565 8.56876 0.9945 8.71376 1.1405L13.4008 5.8265H0.374756C0.167756 5.8265 -0.000244141 5.9945 -0.000244141 6.2015C-0.000244141 6.4085 0.167756 6.5765 0.374756 6.5765H13.4008L8.71376 11.2625C8.56876 11.4085 8.56876 11.6465 8.71376 11.7935C8.78676 11.8665 8.88376 11.9025 8.97976 11.9025C9.07576 11.9025 9.17176 11.8665 9.24476 11.7935L14.5718 6.4675C14.5728 6.4665 14.5718 6.4655 14.5728 6.4645C14.6388 6.3955 14.6808 6.3045 14.6808 6.2015Z"
+                    fill="#565656"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
