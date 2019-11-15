@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://assets2.cuyana.com/media/css_secure/27e08a8c8a32d73b400a476c543c34df.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://assets4.cuyana.com/static/styles/typography.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://assets2.cuyana.com/media/css_secure/e3f7c2914db22ea7a95140a9c46aaf72.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+    <style>
+      .container {
+        max-width: 375px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      .carousel {
+        width: 343px;
+        position: relative;
+      }
+
+      .carousel-item > img {
+        width: 343px;
+        height: 218px;
+        object-fit: cover;
+      }
+
+      #carousel-position {
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+      }
+
+      #carousel-prev {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 40%;
+        left: 16px;
+      }
+
+      #carousel-next {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 40%;
+        right: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="carousel">
+        <div class="glide">
+          <div data-glide-el="track" class="glide__track">
+            <ul class="glide__slides">
+              <li class="glide__slide carousel-item">
+                <img src="img/Pacific_Palisades.png" />
+              </li>
+              <li class="glide__slide carousel-item">
+                <img src="img/Palo_Alto.png" />
+              </li>
+              <li class="glide__slide carousel-item">
+                <img src="img/SF.png" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button id="carousel-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18">
+            <path
+              fill="#1A1A1A"
+              fill-rule="evenodd"
+              d="M9.286 0a.72.72 0 00-.513.21L0 9l8.773 8.79a.731.731 0 001.01.015.678.678 0 00.016-.979L1.989 9l7.81-7.826a.678.678 0 00-.016-.979A.728.728 0 009.286 0"
+            />
+          </svg>
+        </button>
+        <div id="carousel-position"></div>
+        <button id="carousel-next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18">
+            <path
+              fill="#1A1A1A"
+              fill-rule="evenodd"
+              d="M.714 0a.72.72 0 01.513.21L10 9l-8.773 8.79a.731.731 0 01-1.01.015.678.678 0 01-.016-.979L8.011 9 .201 1.174A.678.678 0 01.217.195.728.728 0 01.714 0"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Load js -->
+    <script src="src/index.js"></script>
+  </body>
+</html>

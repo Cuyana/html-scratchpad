@@ -12,6 +12,7 @@
   "version": "1.0.0",
   "main": "script.js",
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "css-vars-ponyfill": "^2.0.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
