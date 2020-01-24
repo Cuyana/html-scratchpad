@@ -3,6 +3,7 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "parcel": "^1.12.4",
+    "prettier": "1.19.1",
     "sass": "^1.22.7",
     "stylelint": "^10.1.0",
     "stylelint-config-concentric-order": "^3.4.1",

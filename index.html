@@ -1,29 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://assets2.cuyana.com/media/css_secure/27e08a8c8a32d73b400a476c543c34df.css"
+      href="https://www.cuyana.com/skin/frontend/cuyana/default/css/catalog.css"
       media="all"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://assets4.cuyana.com/static/styles/typography.css"
+      href="https://staging.cuyana.tech/static/styles/typography.css"
       media="all"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://assets2.cuyana.com/media/css_secure/e3f7c2914db22ea7a95140a9c46aaf72.css"
+      href="https://www.cuyana.com/skin/frontend/cuyana/default/css/styles.css"
       media="all"
     />
-    <link rel="stylesheet" href="https://www.cuyana.com/src.a2b27638.css" />
+    <link rel="stylesheet" href="https://assets2.cuyana.com/media/css_secure/8dc1de012aac00f08d8255298f3cd5c7.css" />
     <link rel="stylesheet" href="src/styles.scss" />
   </head>
   <body>
-    <div id="root"></div>
+    <section class="grid-container corporate-gift-guide-container" aria-labelledby="corporate-gift-guide">
+      <img class="image-area" src="./corporate-gift-guide.png" alt="Corporate Gift Guide Header Image"/>
+
+      <div class="copy">
+        <p class="copy1">
+          Our products make ideal gifts for your corporate gifting needs.
+        </p>
+        <p class="copy1">
+          With monogramming you can add a personal touch to applicable leather
+          products: from initials, to their name, to your company logo.
+        </p>
+
+        <p class="popular-gifts-link">
+          <a href="#popular-gifts" class="copy3 copy3--underline">See Our Popular Gifts</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="form-container">
+      <form class="form-content" id="corporate-gift-form">
+        <h2 class="title6 center-h2" id="contact-form">Contact Us</h2>
+        <input class="copy1 form-control text-input text-input__md validate-email required required-entry"
+               id="email"
+               type="email"
+               placeholder="*Your Email"
+               maxlength="50" required>
+        <input class="copy1 form-control text-input text-input__md required"
+               id="product-units"
+               type="number"
+               placeholder="*Number of Units" required>
+
+        <div class="form-control">
+          <h3 class="copy1 input-label input-label__md">Item(s) you are interested in:</h3>
+          <div class="checkboxes">
+            <div>
+              <input type="checkbox" id="classic-tote" name="classic-tote" value="Classic Leather Tote">
+              <label class="copy3 input-label" for="classic-tote">Classic Leather Tote</label>
+            </div>
+            <div>
+              <input type="checkbox" id="travel-case-set" name="travel-case-set" value="Leather Travel Case Set">
+              <label class="copy3 input-label" for="travel-case-set">Leather Travel Case Set</label>
+            </div>
+            <div>
+              <input type="checkbox" id="half-moon-pouch" name="half-moon-pouch" value="Half Moon Pouch">
+              <label class="copy3 input-label" for="half-moon-pouch">Half Moon Pouch</label>
+            </div>
+            <div>
+              <input type="checkbox" id="tech-carryall-13-inch" name="tech-carryall-13-inch" value="Tech Carryall 13-Inch">
+              <label class="copy3 input-label" for="tech-carryall-13-inch">Tech Carryall 13-Inch</label>
+            </div>
+            <div>
+              <input type="checkbox" id="small-structured-tote" name="small-structured-tote" value="Small Structured Leather Tote">
+              <label class="copy3 input-label" for="small-structured-tote">Small Structured Leather Tote</label>
+            </div>
+            <div>
+              <input type="checkbox" id="medium-zipper-pouch" name="medium-zipper-pouch" value="Medium Leather Zipper Pouch">
+              <label class="copy3 input-label" for="medium-zipper-pouch">Medium Leather Zipper Pouch</label>
+            </div>
+            <div>
+              <input type="checkbox" id="zipper-cardholder" name="zipper-cardholder" value="Leather Zipper Cardholder">
+              <label class="copy3 input-label" for="zipper-cardholder">Leather Zipper Cardholder</label>
+            </div>
+            <div>
+              <input type="checkbox" id="cardholder" name="cardholder" value="Leather Cardholder">
+              <label class="copy3 input-label" for="cardholder">Leather Cardholder</label>
+            </div>
+            <div>
+              <input type="checkbox" id="other-product" name="other-product">
+              <label class="copy3 input-label" for="other-product">Other</label>
+              <input class="copy3 text-input text-input__sm" id="product-text-input" type="text" maxlength="20">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-control">
+          <label class="copy1 input-label input-label__mds" for="corporate-gift-inquiry-msg">Message:</label>
+          <div class="message-count-wrapper">
+            <textarea class="copy1"
+                      id="corporate-gift-inquiry-msg"
+                      name="corporate-gift-inquiry"
+                      wrap="hard"
+                      spellcheck="true"
+                      maxlength="255"
+                      spellcheck="true"
+                      onkeyup="countRemainingChars()"></textarea>
+            <div class="copy3" id="remaining-chars">255</div>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-button subtitle1" onclick="sendCorporateInquiryToKustomer()">Submit</button>
+      </form>
+    </div>
+
+    <div class="offset-anchor" id="popular-gifts"></div>
+    <h2 class="title6 center-h2">Our Popular Gifts</h2>
+
     <script src="src/index.js"></script>
   </body>
 </html>
