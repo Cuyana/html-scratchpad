@@ -25,7 +25,8 @@
   </head>
   <body>
     <section class="grid-container corporate-gift-guide-container" aria-labelledby="corporate-gift-guide">
-      <img class="image-area" src="./corporate-gift-guide.png" alt="Corporate Gift Guide Header Image"/>
+      <img class="image-area" src="./corporate-gift-guide.jpeg" alt="Corporate Gift Guide Header Image"/>
+<!--      <img  class="image-area"src="{{media url="wysiwyg/CorporateOrders/corporate-gift-guide.jpeg"}}" alt="Corporate Orders Header Image" />-->
 
       <div class="copy">
         <p class="copy1">
@@ -43,17 +44,45 @@
     </section>
 
     <div class="form-container">
+
+      <div class="form-content">
+
+        <div class="form-alert success-alert">
+          <p>
+            Thank you for your message.
+          <br>
+            We will be in touch soon.
+          </p>
+        </div>
+
+        <div class="form-alert error-alert">
+          <p class="error error-font-normal">
+            An error occurred while trying to submit your request.
+            <br>
+            Please try again later.
+          </p>
+          <br>
+          <p>
+            <a class="copy1--underline" href="https://wwww.cuyana.com/contact-us/">Contact Us for Assistance</a>
+          </p>
+        </div>
+
+      </div>
+
       <form class="form-content" id="corporate-gift-form">
         <h2 class="title6 center-h2" id="contact-form">Contact Us</h2>
-        <input class="copy1 form-control text-input text-input__md validate-email required required-entry"
-               id="email"
+        <div class="form-control">
+          <label class="copy3">*Your Email</label>
+          <input class="copy1 text-input text-input__md validate-email required-entry"
+               id="corporate-email-contact"
                type="email"
-               placeholder="*Your Email"
-               maxlength="50" required>
-        <input class="copy1 form-control text-input text-input__md required"
-               id="product-units"
-               type="number"
-               placeholder="*Number of Units" required>
+               maxlength="50">
+        </div>
+        <div class="form-control">
+          <label class="copy3">*Number of Units</label>
+          <input class="copy1 text-input text-input__md required-entry"
+                 id="product-units">
+        </div>
 
         <div class="form-control">
           <h3 class="copy1 input-label input-label__md">Item(s) you are interested in:</h3>
@@ -113,7 +142,7 @@
           </div>
         </div>
 
-        <button type="submit" class="submit-button subtitle1" onclick="sendCorporateInquiryToKustomer()">Submit</button>
+        <button type="submit" class="submit-button submit-button subtitle1" onclick="sendInquiryToKustomer()">Submit</button>
       </form>
     </div>
 

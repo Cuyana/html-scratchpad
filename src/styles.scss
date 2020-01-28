@@ -1,14 +1,13 @@
 // New CSS goes here
 
-
 .offset-anchor {
   position: relative;
   top: calc(-1 * (var(--offset-top) + var(--top-banner-height)));
 }
 
 .corporate-gift-guide-container {
-  width: 1280px;
   margin: 0 auto;
+  margin-top: 24px;
 }
 
 .image-area {
@@ -41,9 +40,7 @@
 
 // Form
 .form-container {
-  width: 340px;
-  margin: 0 auto;
-  margin-top: 42px;
+  margin: 42px 16px auto 16px;
   background-color: var(--offWhite);
 
   .form-content {
@@ -55,12 +52,31 @@
     padding-left: 16px;
   }
 
+  // Success Failure Alerts
+  .form-alert {
+    padding: 16px;
+    text-align: center;
+  }
+
+  .success-alert {
+    display: none;
+  }
+
+  .error-alert {
+    display: none;
+
+    .error-font-normal {
+      font-weight: normal;
+    }
+  }
+
   .form-control {
-    margin-bottom: 32px;
+    margin-top: 32px;
   }
 
   .input-label {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     position: relative;
     color: var(--text-color);
 
@@ -72,7 +88,9 @@
   .text-input {
     background: transparent;
     border: none;
+    border-radius: 0;
     border-bottom: 1px solid var(--primary); // Secondary gray
+    margin-bottom: 4px;
     color: var(--text-color);
 
     &__md {
@@ -81,7 +99,7 @@
       font-weight: 400;
       font-family: var(--styrene-family);
       letter-spacing: 0.48px;
-      line-height: 24px;
+      line-height: 20px;
     }
 
     &__sm {
@@ -94,9 +112,10 @@
     color: var(--primary);
   }
 
-  #popular-gifts {
+  #product-units {
     width: 164px;
   }
+
   .checkboxes {
     display: flex;
     flex-flow: column wrap;
@@ -123,7 +142,7 @@
           width: 10px;
           height: 10px;
           position: absolute;
-          top: 2px;
+          top: 4px;
           left: 1px;
           content: " ";
         }
@@ -137,25 +156,36 @@
 
   #remaining-chars {
     position: absolute;
-    bottom: 8px;
+    bottom: 36px;
     right: 16px;
     color: var(--primary);
   }
 
   #corporate-gift-inquiry-msg {
     background: transparent;
-    border: 1px solid var(--primary);
-    width: -webkit-fill-available; // Override copy1 width
+    border: 1px solid var(--offBlack);
+    border-radius: 0;
+    margin-bottom: 32px;
+    width: 100%;
     color: var(--text-color);
+    resize: none;
   }
 
   .submit-button {
     border: 1px solid var(--offBlack);
-    border-radius: 20px;
+    height: 40px;
     margin-bottom: 32px;
     padding: 8px 36px;
-    background-color: transparent;
+    border-radius: 20px;
+    background-color: var(--offBlack);
+    color: #ffffff;
     align-self: center;
+
+    &__disabled {
+      cursor: initial;
+      background-color: transparent;
+      color: var(--textColor);
+    }
   }
 }
 
@@ -164,9 +194,7 @@
   width: 100%;
   text-align: center;
   margin-top: var(--title-type-mobile);
-  margin-bottom: var(--title-type-mobile);
 }
-
 
 @media (min-width: 768px) {
   .image-area {
@@ -193,7 +221,7 @@
       padding-right: 60px;
 
       .checkboxes {
-        max-height: 150px;
+        max-height: 130px;
       }
     }
   }
@@ -206,7 +234,7 @@
 @media (min-width: 1280px) {
   .copy {
     grid-column-start: 8;
-    grid-column-end: span 4;
+    grid-column-end: span 5;
 
     p {
       margin-bottom: var(--xl-type);
