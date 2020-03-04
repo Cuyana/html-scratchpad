@@ -9,7 +9,20 @@ CMS page and static block guide for Cuayan sustainability pages.
 <reference name="head">
      <action method="addCss"><stylesheet>css/sustainablity.css</stylesheet></action>
 </reference>
+<reference name="after_body_start">
+    <block type="cms/block" name="care.guide.breadcrumbs" after="header-">
+        <action method="setBlockId">
+            <block_id>care_guide_breadcrumbs</block_id>
+        </action>
+    </block>
+</reference>
 ```
+### Breadcrumbs (static block)
+
+Block Title: Care Guide - Breadcrumbs<br/>
+Identifier: care_guide_breadcrumbs<br/>
+Content: breadcrumbs_static_block.html
+
 ## Repair Page
 
 Page Title: Care Guide - Repair<br/>
