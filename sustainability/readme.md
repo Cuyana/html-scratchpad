@@ -23,9 +23,15 @@ Block Title: Care Guide - Breadcrumbs<br/>
 Identifier: care_guide_breadcrumbs<br/>
 Content: breadcrumbs_static_block.html
 
+## Landing Page
+
+Page Title: Care Guide<br/>
+URL Key: care-guide<br/>
+Content File: care_guide.html
+
+
 ## Repair Page
 
 Page Title: Care Guide - Repair<br/>
 URL Key: repair<br/>
 Content File: care_guide_repair.html
-
