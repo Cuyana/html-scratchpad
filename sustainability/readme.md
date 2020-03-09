@@ -21,17 +21,24 @@ CMS page and static block guide for Cuayan sustainability pages.
 
 Block Title: Care Guide - Breadcrumbs<br/>
 Identifier: care_guide_breadcrumbs<br/>
-Content: breadcrumbs_static_block.html
+Content: sustainability/breadcrumbs_static_block.html
 
 ## Landing Page
-
 Page Title: Care Guide<br/>
-URL Key: care-guide<br/>
-Content File: care_guide.html
+URL Key: sustainability/care-guide<br/>
+Content File: sustainability/care_guide.html
 
+## Care Guide Material Detail Page Simple
+Page Title: Sustainability Care Guide {material}<br/>
+URL Key: sustainability/care-guide/{material}<br/>
+Content File: sustainability/care_guide_material_simple.html
+
+## Care Guide Material Detail Page Intermediate
+Page Title: Care Guide<br/>
+URL Key: sustainability/care-guide/alpaca-cashmere-wool<br/>
+Content File: sustainability/care_guide_material_intermediate.html
 
 ## Repair Page
-
 Page Title: Care Guide - Repair<br/>
-URL Key: repair<br/>
-Content File: care_guide_repair.html
+URL Key: sustainability/care-guide/repair<br/>
+Content File: sustainability/care_guide_repair.html
