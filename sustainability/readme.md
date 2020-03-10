@@ -38,6 +38,11 @@ Page Title: Care Guide<br/>
 URL Key: sustainability/care-guide/alpaca-cashmere-wool<br/>
 Content File: sustainability/care_guide_material_intermediate.html
 
+## Care Guide Material Detail Page Complex
+Page Title: Sustainability Care Guide Leather & Suede<br/>
+URL Key: sustainability/care-guide/leather-suede<br/>
+Content File: sustainability/care_guide_material_complex.html
+
 ## Repair Page
 Page Title: Care Guide - Repair<br/>
 URL Key: sustainability/care-guide/repair<br/>
