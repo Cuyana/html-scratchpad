@@ -1,7 +1,32 @@
-
 <!-- breadcrumbs -->
-<div>
-    <a href="#">Sustainability</a> /
-    <a href="#">Care Guide</a> /
-    <span>Repair</span>
+<div id="breadcrumbs">
+<script type="text/javascript">
+    var pathArray = window.location.pathname.split('/');
+    if (pathArray.length > 0 ) {
+
+        var trail = '';
+        if (pathArray.length == 2 ) {
+            trail += '<span>Sustainability</span>';
+        }
+        if (pathArray.length == 3) {
+            trail += '<a href="/sustainbility">Sustainability</a> / ';
+            trail += '<span>Care Guide</span>';
+        }
+        if (pathArray.length == 4) {
+            trail += '<a href="/sustainbility">Sustainability</a> / ';
+            trail += '<a href="sustainbility/care-guide">Care Guide</a> / ';
+            var last = pathArray[pathArray.length - 1].toLowerCase();
+            var crumbArray = {
+                "leather-suede": "Leather & Suede",
+                "cotton-cashmere": "Cotton Cashmere",
+                "alpaca-cashmere-wool": "Alpaca, Cashmere, Wool"
+            };
+            if (crumbArray[last]){
+                last =  crumbArray[last];
+            }
+            trail += '<span class="last-crumb">' + last +'</span>';
+        }
+        document.write(trail);
+    }
+</script>
 </div>
