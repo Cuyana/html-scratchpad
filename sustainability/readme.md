@@ -7,7 +7,7 @@ CMS page and static block guide for Cuayan sustainability pages.
 ### Layout
 ```xml
 <reference name="head">
-     <action method="addCss"><stylesheet>css/sustainablity.css</stylesheet></action>
+     <action method="addCss"><stylesheet>css/sustainability.css</stylesheet></action>
 </reference>
 <reference name="top.container">
     <block type="cms/block" name="care.guide.breadcrumbs" >
