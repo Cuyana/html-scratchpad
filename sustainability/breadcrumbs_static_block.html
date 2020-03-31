@@ -9,22 +9,23 @@
             trail += '<span>Sustainability</span>';
         }
         if (pathArray.length == 3) {
-            trail += '<a href="/sustainability">Sustainability</a> / ';
-            trail += '<span>Care Guide</span>';
+            trail += '<a href="/sustainability">Sustainability</a>';
+            //trail += ' / <span>Care Guide</span>';
         }
         if (pathArray.length == 4) {
             trail += '<a href="/sustainability">Sustainability</a> / ';
-            trail += '<a href="/sustainability/care-guide">Care Guide</a> / ';
-            var last = pathArray[pathArray.length - 1].toLowerCase();
-            var crumbArray = {
-                "leather-suede": "Leather & Suede",
-                "cotton-cashmere": "Cotton Cashmere",
-                "alpaca-cashmere-wool": "Alpaca, Cashmere, Wool"
-            };
-            if (crumbArray[last]){
-                last =  crumbArray[last];
-            }
-            trail += '<span class="last-crumb">' + last +'</span>';
+            trail += '<a href="/sustainability/care-guide">Care Guide</a>';
+
+            //var last = pathArray[pathArray.length - 1].toLowerCase();
+            //var crumbArray = {
+            //    "leather-suede": "Leather & Suede",
+            //    "cotton-cashmere": "Cotton Cashmere",
+            //    "alpaca-cashmere-wool": "Alpaca, Cashmere, Wool"
+            //};
+            //if (crumbArray[last]){
+            //    last =  crumbArray[last];
+            //}
+            //trail += ' / <span class="last-crumb">' + last +'</span>';
         }
         document.write(trail);
     }
