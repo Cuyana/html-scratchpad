@@ -75,11 +75,8 @@
 <section class="page-intro">
   <h1 class="page-intro-title title5">Sustainability</h1>
   <div class="pledge copy-l-reg">
-    Keep it in your closet and out of landfill
-  </div>
-  <p class="copy-m-reg">
     Our Fewer, Better Promise.
-  </p>
+  </div>
   <p class="copy-m-reg">
     We treat our wardrobes as disposable. Americans buy on average 68 items of clothing a year. A UK study showed that
     each garment is worn just seven times before being discarded.
@@ -527,8 +524,8 @@
       <p class="copy2">
         Sign up to receive inspiration as to how to keep your items feeling fresh.
       </p>
-      <!--{{block type="newsletter/subscribe" is_modal="0" template="newsletter/subscribe.phtml"}}-->
-      <?php echo $this->getlayout()->createBlock('newsletter/subscribe')->setTemplate('newsletter/subscribe.phtml')->toHtml(); ?>
+      {{block type="newsletter/subscribe" is_modal="0" template="newsletter/subscribe.phtml"}}
+      <!--<?php echo $this->getlayout()->createBlock('newsletter/subscribe')->setTemplate('newsletter/subscribe.phtml')->toHtml(); ?>-->
 
       <!-- Selected Edit -->
       <div class="edit">
