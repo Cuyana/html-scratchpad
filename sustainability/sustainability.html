@@ -3,54 +3,54 @@
   <div class="sub-section-nav sticky-nav" data-section="subsection-nav">
     <div class="grid-container">
       <div class="col4">
-      <a id="sub-nav-section-1" class="first-level active" href="#section-1">
-        Produce Responsibly
-      </a>
-      <span class="next-section-divider">
-        <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M7.15973 6.50091L0.81898 0.160156C0.81898 0.160156 0.159729 0.819408 0.159729 0.819408L5.84123 6.50091L0.159729 12.1815C0.159729 12.1815 0.81898 12.8407 0.81898 12.8407L7.15973 6.50091Z"
-                fill="#1A1A1A"/>
-        </svg>
-      </span>
-      <div class="second-level">
-        <a id="sub-nav-section-1-1" class="copy2--underline" href="#section-1-1">
-          Factories
+        <a id="sub-nav-section-1" class="first-level active" href="#section-1">
+          Produce Responsibly
         </a>
-        <a id="sub-nav-section-1-2" href="#section-1-2">
-          Certifications
-        </a>
-        <a id="sub-nav-section-1-3" href="#section-1-3">
-          Inventory
-        </a>
+        <span class="next-section-divider">
+          <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M7.15973 6.50091L0.81898 0.160156C0.81898 0.160156 0.159729 0.819408 0.159729 0.819408L5.84123 6.50091L0.159729 12.1815C0.159729 12.1815 0.81898 12.8407 0.81898 12.8407L7.15973 6.50091Z"
+                  fill="#1A1A1A"/>
+          </svg>
+        </span>
+        <div class="second-level">
+          <a id="sub-nav-section-1-1" class="active" href="#section-1-1">
+            Factories
+          </a>
+          <a id="sub-nav-section-1-2" href="#section-1-2">
+            Certifications
+          </a>
+          <a id="sub-nav-section-1-3" href="#section-1-3">
+            Inventory
+          </a>
+        </div>
       </div>
-    </div>
       <div class="col4">
-      <a id="sub-nav-section-2" class="first-level" href="#section-2">
+        <a id="sub-nav-section-2" class="first-level" href="#section-2">
         Maximize Wears
       </a>
-      <span class="next-section-divider">
+        <span class="next-section-divider">
         <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M7.15973 6.50091L0.81898 0.160156C0.81898 0.160156 0.159729 0.819408 0.159729 0.819408L5.84123 6.50091L0.159729 12.1815C0.159729 12.1815 0.81898 12.8407 0.81898 12.8407L7.15973 6.50091Z"
                 fill="#1A1A1A"/>
         </svg>
       </span>
-      <div class="second-level">
-        <a id="sub-nav-section-2-1" href="#section-2-1">
-          Design
-        </a>
-        <a id="sub-nav-section-2-2" href="#section-2-2">
-          Quality
-        </a>
-        <a id="sub-nav-section-2-3" href="#section-2-3">
-          Refresh
-        </a>
-        <a id="sub-nav-section-2-4" href="#section-2-4">
-          Rewear
-        </a>
+        <div class="second-level">
+          <a id="sub-nav-section-2-1" href="#section-2-1">
+            Design
+          </a>
+          <a id="sub-nav-section-2-2" href="#section-2-2">
+            Quality
+          </a>
+          <a id="sub-nav-section-2-3" href="#section-2-3">
+            Refresh
+          </a>
+          <a id="sub-nav-section-2-4" href="#section-2-4">
+            Rewear
+          </a>
+        </div>
       </div>
-    </div>
       <div class="col4">
       <a id="sub-nav-section-3" class="first-level" href="#section-3">
         Recycle
@@ -701,14 +701,18 @@
       else {
         return false;
       }
+    };
 
-    }
+    var $l1active = "";
+    var $l2active = "";
 
     function fixpos() {
-      console.log("fixpos");
       // close open menu from mobile on any scroll
       $j(".sub-section-nav").removeClass("open");
       $j(".open").removeClass("open");
+
+      var $l1new = "";
+      var $l2new = "";
 
       $page.each(function () {
         var $br = this.getBoundingClientRect();
@@ -730,9 +734,7 @@
           if ($el.data("desktopNav")) {
             $dtn = $j("#" + $el.data("desktopNav"));
             if ($dtn && $sectionActiveTrigger) {
-              $j("#subsection-nav .first-level.active").removeClass("active");
-              $j("#subsection-nav .second-level>a.copy2--underline").removeClass("copy2--underline");
-              $dtn.addClass("active");
+                $l1new = $dtn.attr('id');
             }
           }
 
@@ -743,13 +745,24 @@
               $dtsn = $j("#" + $j(this).data("desktopNav"));
               var $shouldHighlight = $subel.top < ($j(window).height() - offset) * .6;
               if ($dtsn && $shouldHighlight) {
-                $j("#subsection-nav .second-level>a.copy2--underline").removeClass("copy2--underline");
-                $dtsn.addClass("copy2--underline");
+                $l2new = $dtsn.attr('id');
               }
             });
           }
         };
       });
+
+      if ($l1new && $l1new !== $l1active) {
+        $j("#" + $l1active).removeClass("active");
+        $j("#" + $l1new).addClass("active");
+        $l1active = $l1new;
+      }
+
+      if ($l2new && $l2new !== $l2active) {
+        $j("#" + $l2active).removeClass("active");
+        $j("#" + $l2new).addClass("active");
+        $l2active = $l2new;
+      }
     };
 
     if(!detectIE()) {
@@ -760,10 +773,7 @@
         document.addEventListener("DOMContentLoaded", fixpos);
         document.addEventListener("DOMContentLoaded", smoothScroll);
       }
-      //fixpos(); // on DOM ready
       $win.on("load scroll", fixpos); // and load + scroll
     }
-
   });
-
 </script>
